@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import StudentView from "../views/Students/View.vue";
+import StudentCreate from "../views/Students/Create.vue";
+import StudentEdit from "../views/Students/Edit.vue";
 
 const routes = [
   {
@@ -19,6 +21,17 @@ const routes = [
     name: "students",
     component: StudentView,
   },
+  {
+    path: "/students/create",
+    name: "studentsCreate",
+    component: StudentCreate,
+  },
+  {
+    path: '/students/:id/edit',
+    name: "studentEdit",
+    component: StudentEdit,
+  },
+  
 ];
 
 const router = createRouter({
